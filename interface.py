@@ -1,14 +1,9 @@
 
-#!/usr/bin/env python3.6
-from passlock import User, Credentials
+#!/usr/bin/env python3.8
+from passwordlock import User, Credentials
 
 def function():
-	print("               ____                         _____  _                               ")
-	print("              |  _ \                       / ____|| |                              ")
-	print("              | |_) )  ____  ___   ___    / ____  | |__    _____  _ _  ____        ")
-	print("              |  __/  / _  |/ __  / __    \___  \ |  __)  /  _  \| '_|/ __ \       ")
-	print("              | |    / (_| |\__ \ \__ \    ___  / | |___ (  (_)  ) | |  ___/       ")
-	print("              |_|    \_____| ___/  ___/   |____/  |_____) \_____/|_|  \____        ")
+    print("PASSWORD LOCKER")
 function()
 
 def create_new_user(username,password):
@@ -74,18 +69,18 @@ def generate_Password():
     '''
     generates a random password for the user.
     '''
-    auto_password=Credentials.generatePassword()
+    auto_password = Credentials.generatePassword(self= Credentials)
     return auto_password
+
 def copy_password(account):
     """
-    A funct that copies the password using the pyperclip framework
+    A function that copies the password using the pyperclip framework
     We import the framework then declare a function that copies the emails.
     """
     return Credentials.copy_password(account)
 
-
 def passlocker():
-    print("Hello Welcome to your Accounts Password Store...\n Please enter one of the following to proceed.\n CA ---  Create New Account  \n LI ---  Have An Account  \n")
+    print("Hello Welcome to your Accounts' Password Store...\n Please enter one of the following to proceed.\n CA ---  Create New Account  \n LI ---  Have An Account  \n")
     short_code=input("").lower().strip()
     if short_code == "ca":
         print("Sign Up")
@@ -121,7 +116,7 @@ def passlocker():
         short_code = input().lower().strip()
         if short_code == "cc":
             print("Create New Credential")
-            print("."*20)
+            print("." * 20)
             print("Account name ....")
             account = input().lower()
             print("Your Account username")
@@ -146,10 +141,10 @@ def passlocker():
                 print("Here's your list of acoounts: ")
                  
                 print('*' * 30)
-                print('_'* 30)
+                print('_' * 30)
                 for account in display_accounts_details():
                     print(f" Account:{account.account} \n User Name:{username}\n Password:{password}")
-                    print('_'* 30)
+                    print('_' * 30)
                 print('*' * 30)
             else:
                 print("You don't have any credentials saved yet..........")
@@ -188,7 +183,7 @@ def passlocker():
         else:
             print("Wrong entry... Check your entry again and let it match those in the menu")
     else:
-        print("Please enter a valid input to continue")
+            print("Please enter a valid input to continue")
 
 if __name__ == '__main__':
     passlocker()

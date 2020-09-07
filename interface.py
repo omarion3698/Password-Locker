@@ -1,22 +1,21 @@
-
 #!/usr/bin/env python3.8
 from passwordlock import User, Credentials
 
 def function():
     print("PASSWORD LOCKER")
-function()
+    function()
 
 def create_new_user(username,password):
-    '''
+    """
     Function to create a new user with a username and password
-    '''
+    """
     new_user = User(username,password)
     return new_user
 
 def save_user(user):
-    '''
+    """
     Function to save a new user
-    '''
+    """
     user.save_user()
 def display_user():
     """
@@ -66,9 +65,9 @@ def check_credendtials(account):
     return Credentials.if_credential_exist(account)
 
 def generate_Password():
-    '''
+    """
     generates a random password for the user.
-    '''
+    """
     auto_password = Credentials.generatePassword(self= Credentials)
     return auto_password
 

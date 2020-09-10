@@ -18,7 +18,7 @@ class User:
         """
         A method that saves a new user instace into the user list
         """
-        User.user_list.append(self)
+        return User.user_list.append(self)
     
 
     @classmethod
@@ -29,7 +29,7 @@ class User:
         '''
         delete_account method deletes a  saved account from the list
         '''
-        User.user_list.remove(self)
+        return User.user_list.remove(self)
 
 class Credentials():
     """
@@ -59,13 +59,13 @@ class Credentials():
         """
         method to store a new credential to the credentials list
         """
-        Credentials.credentials_list.append(self)
+        return Credentials.credentials_list.append(self)
 
     def delete_credentials(self):
         """
         delete_credentials method that deletes an account credentials from the credentials_list
         """
-        Credentials.credentials_list.remove(self)
+        return Credentials.credentials_list.remove(self)
     
     @classmethod
     def find_credential(cls, account):

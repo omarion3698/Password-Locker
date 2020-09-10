@@ -16,7 +16,7 @@ def save_user(user):
     """
     Function to save a new user
     """
-    user.save_user()
+    return user.save_user()
 def display_user():
     """
     Function to display existing user
@@ -40,7 +40,7 @@ def save_credentials(credentials):
     """
     Function to save Credentials to the credentials list
     """
-    credentials. save_details()
+    return credentials. save_details()
 def display_accounts_details():
     """
     Function that returns all the saved credential.
@@ -51,7 +51,7 @@ def delete_credential(credentials):
     """
     Function to delete a Credentials from credentials list
     """
-    credentials.delete_credentials()
+    return credentials.delete_credentials()
 
 def find_credential(account):
     """
@@ -97,11 +97,11 @@ def passlocker():
             else:
                 print("Invalid password please try again")
         save_user(create_new_user(username,password))
-        print("*"*85)
+        print("*" * 85)
         print(f"Hello {username}, Your account has been created succesfully! Your password is: {password}")
-        print("*"*85)
+        print("*" * 85)
     elif short_code == "li":
-        print("*"*50)
+        print("*" * 50)
         print("Enter your User name and your Password to log in:")
         print('*' * 50)
         username = input("User name: ")
@@ -133,11 +133,11 @@ def passlocker():
                     print("Invalid password please try again")
             save_credentials(create_new_credential(account,userName,password))
             print('\n')
-            print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} created succesfully")
+            print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} created succesfully!")
             print('\n')
         elif short_code == "dc":
             if display_accounts_details():
-                print("Here's your list of acoounts: ")
+                print("Here's your list of accounts: ")
                  
                 print('*' * 30)
                 print('_' * 30)
@@ -175,7 +175,7 @@ def passlocker():
         elif short_code == 'gp':
 
             password = generate_Password()
-            print(f" {password} Has been generated succesfull. You can proceed to use it to your account")
+            print(f" {password} Has been generated successfull. You can proceed to use it to your account")
         elif short_code == 'ex':
             print("Thanks for using passwords store manager.. See you next time!")
             break
